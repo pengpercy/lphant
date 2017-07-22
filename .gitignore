@@ -3,3 +3,13 @@
 ################################################################################
 
 /Source/Client/bin/Debug
+/Source/Backup
+/Source/Client/obj/Debug
+/Source/Interface/bin/Debug
+/Source/Interface/obj/Debug
+/Source/Kernel/bin/Debug
+/Source/Kernel/obj/Debug/eLePhant.pdb
+/Source/Kernel/obj/Debug/eLePhant.dll
+/Source/Kernel/obj/Debug/eLePhant.csprojResolveAssemblyReference.cache
+/Source/Kernel/obj/Debug/eLePhant.csproj.FileListAbsolute.txt
+/Source/Kernel/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
