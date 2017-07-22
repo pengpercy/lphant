@@ -231,7 +231,7 @@ namespace eLePhant.eDonkey
 		/*XML example file.
 		<?xml version="1.0" encoding="UTF-8"?>
 		<info> 
-		<version>lphant-v0.01-pré5</version> 
+		<version>lphant-v0.01-pr?</version> 
 		<log>
 		-----------
 		*lphant-v0.01-pre5

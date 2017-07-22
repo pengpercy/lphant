@@ -499,7 +499,7 @@ namespace eLePhant.eDonkey
 			if (!UploadList.Contains(Client)) return;
 			if ((enqueue)&&((float)CKernel.Queue.UploadList.Count-1>=m_GetNumberOfSlots()))
 			{
-				// si no hay nadie en la cola yo no lo he tirado así que se ha salido de transferencias por que 
+				// si no hay nadie en la cola yo no lo he tirado as?que se ha salido de transferencias por que 
 				// ha desconectado,si no hay más gente en la cola que slots no lo metemos para prevenir un bucle
 				Client.QueueInTime=DateTime.Now;
 				UploadList.Remove(Client);

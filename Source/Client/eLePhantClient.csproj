@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,6 +9,27 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>eLePhant.Client</RootNamespace>
     <AssemblyName>eLePhantClient</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,6 +49,12 @@
     <RunWithWarnings>false</RunWithWarnings>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MagicLibrary">
+      <HintPath>..\packages\MagicLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -35,7 +62,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Design" />
-    <Reference Include="ICSharpCode.SharpZipLib" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Kernel\eLePhant.csproj">
@@ -52,55 +78,127 @@
     <Compile Include="CSkin.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Utils.cs" />
-    <Compile Include="Client\eLePhantForm.cs" />
-    <Compile Include="Client\FormAbout.cs" />
+    <Compile Include="Client\eLePhantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Client\KernelGateway.cs" />
     <Compile Include="Client\MenuInfo.cs" />
     <Compile Include="Client\NameCleaner.cs" />
     <Compile Include="Client\Remoting.cs" />
-    <Compile Include="Client\StartForm.cs" />
+    <Compile Include="Client\StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Client\SystemIconsList.cs" />
-    <Compile Include="Client\Forms\FormCategory.cs" />
-    <Compile Include="Client\Forms\FormConnections.cs" />
-    <Compile Include="Client\Forms\FormDownloads.cs" />
-    <Compile Include="Client\Forms\FormFriends.cs" />
-    <Compile Include="Client\Forms\FormOptions.cs" />
-    <Compile Include="Client\Forms\FormSearch.cs" />
-    <Compile Include="Client\Forms\FormServers.cs" />
-    <Compile Include="Client\Forms\FormUploads.cs" />
-    <Compile Include="Client\Forms\FileDetails\FormAviDetails.cs" />
-    <Compile Include="Client\Lists\commentsListView.cs" />
-    <Compile Include="Client\Lists\downloadsListView.cs" />
-    <Compile Include="Client\Lists\eLePhantListView.cs" />
-    <Compile Include="Client\Lists\fileNamesListView.cs" />
+    <Compile Include="Client\Forms\FormCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Forms\FormConnections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Forms\FormDownloads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Forms\FormFriends.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Forms\FormOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Forms\FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Forms\FormServers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Forms\FormUploads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Forms\FileDetails\FormAviDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Lists\commentsListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Client\Lists\downloadsListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Client\Lists\eLePhantListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Client\Lists\fileNamesListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Client\Lists\ListColumn.cs" />
     <Compile Include="Client\Lists\ListColumnArray.cs" />
-    <Compile Include="Client\Lists\queueListView.cs" />
-    <Compile Include="Client\Lists\searchListView.cs" />
-    <Compile Include="Client\Lists\serversListView.cs" />
-    <Compile Include="Client\Lists\sharedListView.cs" />
-    <Compile Include="Client\Lists\sourcesListView.cs" />
-    <Compile Include="Client\Lists\uploadsListView.cs" />
+    <Compile Include="Client\Lists\queueListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Client\Lists\searchListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Client\Lists\serversListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Client\Lists\sharedListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Client\Lists\sourcesListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Client\Lists\uploadsListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Client\Types\Types.cs" />
     <Compile Include="Client\Win32\Win32.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MagicLibrary.dll" />
     <Content Include="Client\App.ico" />
     <Content Include="Client\webSearchs.xml" />
-    <Content Include="Language\interface_ca-ES.xml" />
-    <Content Include="Language\interface_de-DE.xml" />
-    <Content Include="Language\interface_en-US.xml" />
-    <Content Include="Language\interface_es-ES.xml" />
-    <Content Include="Language\interface_fi-FI.xml" />
-    <Content Include="Language\interface_fr-FR.xml" />
-    <Content Include="Language\interface_gl-ES.xml" />
-    <Content Include="Language\interface_hu-HU.xml" />
-    <Content Include="Language\interface_it-IT.xml" />
-    <Content Include="Language\interface_pl-PL.xml" />
-    <Content Include="Language\interface_pt-BR.xml" />
-    <Content Include="Language\interface_ru-RU.xml" />
-    <Content Include="Language\interface_zh-TW.xml" />
+    <Content Include="Language\interface_ca-ES.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_de-DE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_en-US.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_es-ES.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_fi-FI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_fr-FR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_gl-ES.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_hu-HU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_it-IT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_pl-PL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_pt-BR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_ru-RU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_zh-CN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Language\interface_zh-TW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Client\eLePhantForm.resx">
@@ -203,6 +301,13 @@
     <EmbeddedResource Include="Client\Resources\Classic\ToolBarButtons.bmp" />
     <EmbeddedResource Include="Client\Resources\Classic\ToolBarExtensible.bmp" />
     <EmbeddedResource Include="Client\Resources\Classic\ToolBarRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

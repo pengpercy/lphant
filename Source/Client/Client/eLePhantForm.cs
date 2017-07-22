@@ -39,8 +39,8 @@ namespace eLePhant.Client
 	/// <summary>
 	/// Summary description for eLePhantForm.
 	/// </summary>
-	public class eLePhantForm : System.Windows.Forms.Form
-	{
+	public class eLePhantForm : Form
+    {
 		public struct connection
 		{
 			public float up;
@@ -54,8 +54,8 @@ namespace eLePhant.Client
 		};
 		public static ArrayList altConnections;
 		private eLePhant.Interface.eLePhantToggleButton btnDownloads;
-		private System.Windows.Forms.Panel panelExtensible;
-		private System.Windows.Forms.Panel panelButtons;
+		private Panel panelExtensible;
+		private Panel panelButtons;
 		private eLePhant.Interface.eLePhantToggleButton btnServers;
 		private eLePhant.Interface.eLePhantToggleButton btnSearch;
 		private eLePhant.Interface.eLePhantToggleButton btnUploads;
@@ -65,7 +65,7 @@ namespace eLePhant.Client
 		private System.ComponentModel.IContainer components;
 
 		private CkernelGateway krnGateway;
-		private System.Windows.Forms.Panel panelContent;
+		private Panel panelContent;
 
 		private FormDownloads FDownloads;
 		private FormUploads FUploads;
@@ -73,7 +73,7 @@ namespace eLePhant.Client
 		private FormSearch FSearchs;
 		public FormFriends FFriends;
 		private System.Windows.Forms.ToolTip toolTipMain;
-		private System.Windows.Forms.Panel panel1;
+		private Panel panel1;
 		private eLePhant.Interface.eLePhantButton eLePhantButtonConnect;
 		private System.Windows.Forms.ImageList imageListServerDiscon;
 		private System.Windows.Forms.ImageList imageListServerCon;
@@ -99,12 +99,12 @@ namespace eLePhant.Client
 		public static CSkin Skin;
 		public static CSystemIconsList SystemIconsList;
 		internal static Config preferences;
-		private System.Windows.Forms.Panel panelGraphic;
-		private System.Windows.Forms.Panel panelToolbarRight;
-		private System.Windows.Forms.Panel panelStatusBar;
-		private System.Windows.Forms.Panel panelStatusBarLeft;
-		private System.Windows.Forms.Panel panelStatusBarRight;
-		private System.Windows.Forms.Panel panelStatusBarExtensible;
+		private Panel panelGraphic;
+		private Panel panelToolbarRight;
+		private Panel panelStatusBar;
+		private Panel panelStatusBarLeft;
+		private Panel panelStatusBarRight;
+		private Panel panelStatusBarExtensible;
 		private System.Windows.Forms.Label labelStatusServer;
 		private System.Windows.Forms.Label labelStatusAvgDOSpeed;
 		private System.Windows.Forms.Label labelStatusDOSpeed;
@@ -115,15 +115,15 @@ namespace eLePhant.Client
 		private System.Windows.Forms.Button buttonAboutMenu;
 		private System.Windows.Forms.ContextMenu contextMenuAbout;
 		private System.Windows.Forms.Button buttonAbout;
-		private System.Windows.Forms.MenuItem menuItemWeb;
-		private System.Windows.Forms.MenuItem menuItemSupport;
+		private MenuItem menuItemWeb;
+		private MenuItem menuItemSupport;
 		private System.Windows.Forms.ContextMenu contextMenuNotifyIcon;
-		private System.Windows.Forms.MenuItem menuItemNotifyIconOpen;
-		private System.Windows.Forms.MenuItem menuItemNotifyIconQuit;
-		private System.Windows.Forms.MenuItem menuItemNotifyIconOptions;
-		private System.Windows.Forms.MenuItem menuItemSkins;
-		private System.Windows.Forms.MenuItem menuItemNotifyIconConection;
-		private System.Windows.Forms.MenuItem menuItem1;
+		private MenuItem menuItemNotifyIconOpen;
+		private MenuItem menuItemNotifyIconQuit;
+		private MenuItem menuItemNotifyIconOptions;
+		private MenuItem menuItemSkins;
+		private MenuItem menuItemNotifyIconConection;
+		private MenuItem menuItem1;
 		
 		private byte m_LastIcon;
 		
@@ -460,25 +460,25 @@ namespace eLePhant.Client
 		{
 			this.components = new System.ComponentModel.Container();
 			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(eLePhantForm));
-			this.panelStatusBar = new System.Windows.Forms.Panel();
-			this.panelStatusBarExtensible = new System.Windows.Forms.Panel();
-			this.panelStatusBarRight = new System.Windows.Forms.Panel();
-			this.panelStatusBarLeft = new System.Windows.Forms.Panel();
+			this.panelStatusBar = new Panel();
+			this.panelStatusBarExtensible = new Panel();
+			this.panelStatusBarRight = new Panel();
+			this.panelStatusBarLeft = new Panel();
 			this.labelStatusMsg = new System.Windows.Forms.Label();
 			this.labelStatusAvgDOSpeed = new System.Windows.Forms.Label();
 			this.labelStatusDOSpeed = new System.Windows.Forms.Label();
 			this.labelStatusUPSpeed = new System.Windows.Forms.Label();
 			this.labelStatusServer = new System.Windows.Forms.Label();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.panelContent = new System.Windows.Forms.Panel();
-			this.panelExtensible = new System.Windows.Forms.Panel();
+			this.panel1 = new Panel();
+			this.panelContent = new Panel();
+			this.panelExtensible = new Panel();
 			this.buttonAboutMenu = new System.Windows.Forms.Button();
 			this.buttonAbout = new System.Windows.Forms.Button();
 			this.labelSessionDO = new System.Windows.Forms.Label();
 			this.labelSessionUP = new System.Windows.Forms.Label();
 			this.graphics = new eLePhant.Interface.eLePhantGraphic(this.components);
-			this.panelToolbarRight = new System.Windows.Forms.Panel();
-			this.panelButtons = new System.Windows.Forms.Panel();
+			this.panelToolbarRight = new Panel();
+			this.panelButtons = new Panel();
 			this.eLePhantButtonConnect = new eLePhant.Interface.eLePhantButton(this.components);
 			this.imageListServerCon = new System.Windows.Forms.ImageList(this.components);
 			this.buttonOptions = new eLePhant.Interface.eLePhantButton(this.components);
@@ -491,19 +491,19 @@ namespace eLePhant.Client
 			this.imageListServerDiscon = new System.Windows.Forms.ImageList(this.components);
 			this.imageListHelp = new System.Windows.Forms.ImageList(this.components);
 			this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
-			this.panelGraphic = new System.Windows.Forms.Panel();
+			this.panelGraphic = new Panel();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
 			this.contextMenuNotifyIcon = new System.Windows.Forms.ContextMenu();
-			this.menuItemNotifyIconOpen = new System.Windows.Forms.MenuItem();
-			this.menuItemNotifyIconQuit = new System.Windows.Forms.MenuItem();
-			this.menuItemNotifyIconOptions = new System.Windows.Forms.MenuItem();
-			this.menuItem1 = new System.Windows.Forms.MenuItem();
-			this.menuItemNotifyIconConection = new System.Windows.Forms.MenuItem();
+			this.menuItemNotifyIconOpen = new MenuItem();
+			this.menuItemNotifyIconQuit = new MenuItem();
+			this.menuItemNotifyIconOptions = new MenuItem();
+			this.menuItem1 = new MenuItem();
+			this.menuItemNotifyIconConection = new MenuItem();
 			this.imageListIcons = new System.Windows.Forms.ImageList(this.components);
 			this.contextMenuAbout = new System.Windows.Forms.ContextMenu();
-			this.menuItemWeb = new System.Windows.Forms.MenuItem();
-			this.menuItemSupport = new System.Windows.Forms.MenuItem();
-			this.menuItemSkins = new System.Windows.Forms.MenuItem();
+			this.menuItemWeb = new MenuItem();
+			this.menuItemSupport = new MenuItem();
+			this.menuItemSkins = new MenuItem();
 			this.panelStatusBar.SuspendLayout();
 			this.panelStatusBarLeft.SuspendLayout();
 			this.panelExtensible.SuspendLayout();
@@ -516,8 +516,8 @@ namespace eLePhant.Client
 			this.panelStatusBar.Controls.Add(this.panelStatusBarExtensible);
 			this.panelStatusBar.Controls.Add(this.panelStatusBarRight);
 			this.panelStatusBar.Controls.Add(this.panelStatusBarLeft);
-			this.panelStatusBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panelStatusBar.ForeColor = System.Drawing.Color.Transparent;
+			this.panelStatusBar.Dock = DockStyle.Bottom;
+			this.panelStatusBar.ForeColor = Color.Transparent;
 			this.panelStatusBar.Location = new System.Drawing.Point(0, 444);
 			this.panelStatusBar.Name = "panelStatusBar";
 			this.panelStatusBar.Size = new System.Drawing.Size(880, 22);
@@ -526,7 +526,7 @@ namespace eLePhant.Client
 			// panelStatusBarExtensible
 			// 
 			this.panelStatusBarExtensible.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelStatusBarExtensible.BackgroundImage")));
-			this.panelStatusBarExtensible.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panelStatusBarExtensible.Dock = DockStyle.Fill;
 			this.panelStatusBarExtensible.Location = new System.Drawing.Point(771, 0);
 			this.panelStatusBarExtensible.Name = "panelStatusBarExtensible";
 			this.panelStatusBarExtensible.Size = new System.Drawing.Size(95, 22);
@@ -535,7 +535,7 @@ namespace eLePhant.Client
 			// panelStatusBarRight
 			// 
 			this.panelStatusBarRight.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelStatusBarRight.BackgroundImage")));
-			this.panelStatusBarRight.Dock = System.Windows.Forms.DockStyle.Right;
+			this.panelStatusBarRight.Dock = DockStyle.Right;
 			this.panelStatusBarRight.Location = new System.Drawing.Point(866, 0);
 			this.panelStatusBarRight.Name = "panelStatusBarRight";
 			this.panelStatusBarRight.Size = new System.Drawing.Size(14, 22);
@@ -549,7 +549,7 @@ namespace eLePhant.Client
 			this.panelStatusBarLeft.Controls.Add(this.labelStatusDOSpeed);
 			this.panelStatusBarLeft.Controls.Add(this.labelStatusUPSpeed);
 			this.panelStatusBarLeft.Controls.Add(this.labelStatusServer);
-			this.panelStatusBarLeft.Dock = System.Windows.Forms.DockStyle.Left;
+			this.panelStatusBarLeft.Dock = DockStyle.Left;
 			this.panelStatusBarLeft.Location = new System.Drawing.Point(0, 0);
 			this.panelStatusBarLeft.Name = "panelStatusBarLeft";
 			this.panelStatusBarLeft.Size = new System.Drawing.Size(771, 22);
@@ -557,8 +557,8 @@ namespace eLePhant.Client
 			// 
 			// labelStatusMsg
 			// 
-			this.labelStatusMsg.BackColor = System.Drawing.Color.Transparent;
-			this.labelStatusMsg.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(68)), ((System.Byte)(69)), ((System.Byte)(151)));
+			this.labelStatusMsg.BackColor = Color.Transparent;
+			this.labelStatusMsg.ForeColor = Color.FromArgb(((System.Byte)(68)), ((System.Byte)(69)), ((System.Byte)(151)));
 			this.labelStatusMsg.Location = new System.Drawing.Point(3, 5);
 			this.labelStatusMsg.Name = "labelStatusMsg";
 			this.labelStatusMsg.Size = new System.Drawing.Size(320, 13);
@@ -568,8 +568,8 @@ namespace eLePhant.Client
 			// 
 			// labelStatusAvgDOSpeed
 			// 
-			this.labelStatusAvgDOSpeed.BackColor = System.Drawing.Color.Transparent;
-			this.labelStatusAvgDOSpeed.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(68)), ((System.Byte)(69)), ((System.Byte)(151)));
+			this.labelStatusAvgDOSpeed.BackColor = Color.Transparent;
+			this.labelStatusAvgDOSpeed.ForeColor = Color.FromArgb(((System.Byte)(68)), ((System.Byte)(69)), ((System.Byte)(151)));
 			this.labelStatusAvgDOSpeed.Location = new System.Drawing.Point(456, 5);
 			this.labelStatusAvgDOSpeed.Name = "labelStatusAvgDOSpeed";
 			this.labelStatusAvgDOSpeed.Size = new System.Drawing.Size(72, 11);
@@ -578,9 +578,9 @@ namespace eLePhant.Client
 			// 
 			// labelStatusDOSpeed
 			// 
-			this.labelStatusDOSpeed.BackColor = System.Drawing.Color.Transparent;
-			this.labelStatusDOSpeed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.labelStatusDOSpeed.ForeColor = System.Drawing.Color.Green;
+			this.labelStatusDOSpeed.BackColor = Color.Transparent;
+			this.labelStatusDOSpeed.FlatStyle = FlatStyle.Flat;
+			this.labelStatusDOSpeed.ForeColor = Color.Green;
 			this.labelStatusDOSpeed.Location = new System.Drawing.Point(400, 5);
 			this.labelStatusDOSpeed.Name = "labelStatusDOSpeed";
 			this.labelStatusDOSpeed.Size = new System.Drawing.Size(48, 11);
@@ -589,9 +589,9 @@ namespace eLePhant.Client
 			// 
 			// labelStatusUPSpeed
 			// 
-			this.labelStatusUPSpeed.BackColor = System.Drawing.Color.Transparent;
-			this.labelStatusUPSpeed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.labelStatusUPSpeed.ForeColor = System.Drawing.Color.Red;
+			this.labelStatusUPSpeed.BackColor = Color.Transparent;
+			this.labelStatusUPSpeed.FlatStyle = FlatStyle.Flat;
+			this.labelStatusUPSpeed.ForeColor = Color.Red;
 			this.labelStatusUPSpeed.Location = new System.Drawing.Point(344, 5);
 			this.labelStatusUPSpeed.Name = "labelStatusUPSpeed";
 			this.labelStatusUPSpeed.Size = new System.Drawing.Size(46, 12);
@@ -600,9 +600,9 @@ namespace eLePhant.Client
 			// 
 			// labelStatusServer
 			// 
-			this.labelStatusServer.BackColor = System.Drawing.Color.Transparent;
-			this.labelStatusServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.labelStatusServer.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(68)), ((System.Byte)(69)), ((System.Byte)(151)));
+			this.labelStatusServer.BackColor = Color.Transparent;
+			this.labelStatusServer.FlatStyle = FlatStyle.Flat;
+			this.labelStatusServer.ForeColor = Color.FromArgb(((System.Byte)(68)), ((System.Byte)(69)), ((System.Byte)(151)));
 			this.labelStatusServer.Location = new System.Drawing.Point(537, 6);
 			this.labelStatusServer.Name = "labelStatusServer";
 			this.labelStatusServer.Size = new System.Drawing.Size(216, 11);
@@ -642,8 +642,8 @@ namespace eLePhant.Client
 			// 
 			// buttonAboutMenu
 			// 
-			this.buttonAboutMenu.BackColor = System.Drawing.Color.Transparent;
-			this.buttonAboutMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.buttonAboutMenu.BackColor = Color.Transparent;
+			this.buttonAboutMenu.FlatStyle = FlatStyle.Flat;
 			this.buttonAboutMenu.Location = new System.Drawing.Point(127, 3);
 			this.buttonAboutMenu.Name = "buttonAboutMenu";
 			this.buttonAboutMenu.Size = new System.Drawing.Size(17, 19);
@@ -653,9 +653,9 @@ namespace eLePhant.Client
 			// 
 			// buttonAbout
 			// 
-			this.buttonAbout.BackColor = System.Drawing.Color.Transparent;
-			this.buttonAbout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonAbout.ForeColor = System.Drawing.Color.Black;
+			this.buttonAbout.BackColor = Color.Transparent;
+			this.buttonAbout.FlatStyle = FlatStyle.Popup;
+			this.buttonAbout.ForeColor = Color.Black;
 			this.buttonAbout.Location = new System.Drawing.Point(58, 3);
 			this.buttonAbout.Name = "buttonAbout";
 			this.buttonAbout.Size = new System.Drawing.Size(70, 19);
@@ -667,10 +667,10 @@ namespace eLePhant.Client
 			// labelSessionDO
 			// 
 			this.labelSessionDO.AutoSize = true;
-			this.labelSessionDO.BackColor = System.Drawing.Color.Transparent;
-			this.labelSessionDO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.labelSessionDO.BackColor = Color.Transparent;
+			this.labelSessionDO.FlatStyle = FlatStyle.Flat;
 			this.labelSessionDO.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.labelSessionDO.ForeColor = System.Drawing.Color.Green;
+			this.labelSessionDO.ForeColor = Color.Green;
 			this.labelSessionDO.Location = new System.Drawing.Point(56, 24);
 			this.labelSessionDO.Name = "labelSessionDO";
 			this.labelSessionDO.Size = new System.Drawing.Size(99, 15);
@@ -680,10 +680,10 @@ namespace eLePhant.Client
 			// labelSessionUP
 			// 
 			this.labelSessionUP.AutoSize = true;
-			this.labelSessionUP.BackColor = System.Drawing.Color.Transparent;
-			this.labelSessionUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.labelSessionUP.BackColor = Color.Transparent;
+			this.labelSessionUP.FlatStyle = FlatStyle.Flat;
 			this.labelSessionUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.labelSessionUP.ForeColor = System.Drawing.Color.Red;
+			this.labelSessionUP.ForeColor = Color.Red;
 			this.labelSessionUP.Location = new System.Drawing.Point(56, 40);
 			this.labelSessionUP.Name = "labelSessionUP";
 			this.labelSessionUP.Size = new System.Drawing.Size(86, 15);
@@ -693,7 +693,7 @@ namespace eLePhant.Client
 			// graphics
 			// 
 			this.graphics.AutoGraphicScale = false;
-			this.graphics.BackColor = System.Drawing.Color.Transparent;
+			this.graphics.BackColor = Color.Transparent;
 			this.graphics.GraphicScale = 0;
 			this.graphics.Location = new System.Drawing.Point(7, 6);
 			this.graphics.Name = "graphics";
@@ -728,9 +728,9 @@ namespace eLePhant.Client
 			// 
 			// eLePhantButtonConnect
 			// 
-			this.eLePhantButtonConnect.BackColor = System.Drawing.Color.Transparent;
+			this.eLePhantButtonConnect.BackColor = Color.Transparent;
 			this.eLePhantButtonConnect.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.eLePhantButtonConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.eLePhantButtonConnect.FlatStyle = FlatStyle.Flat;
 			this.eLePhantButtonConnect.ImageIndex = 1;
 			this.eLePhantButtonConnect.ImageList = this.imageListServerCon;
 			this.eLePhantButtonConnect.Location = new System.Drawing.Point(360, 8);
@@ -744,7 +744,7 @@ namespace eLePhant.Client
 			this.imageListServerCon.ColorDepth = System.Windows.Forms.ColorDepth.Depth16Bit;
 			this.imageListServerCon.ImageSize = new System.Drawing.Size(19, 19);
 			this.imageListServerCon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListServerCon.ImageStream")));
-			this.imageListServerCon.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageListServerCon.TransparentColor = Color.Transparent;
 			// 
 			// buttonOptions
 			// 
@@ -761,13 +761,13 @@ namespace eLePhant.Client
 			// 
 			this.imageListOptions.ImageSize = new System.Drawing.Size(19, 19);
 			this.imageListOptions.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListOptions.ImageStream")));
-			this.imageListOptions.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageListOptions.TransparentColor = Color.Transparent;
 			// 
 			// btnFriends
 			// 
 			this.btnFriends.Appearance = System.Windows.Forms.Appearance.Button;
-			this.btnFriends.BackColor = System.Drawing.Color.Transparent;
-			this.btnFriends.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnFriends.BackColor = Color.Transparent;
+			this.btnFriends.FlatStyle = FlatStyle.Popup;
 			this.btnFriends.Location = new System.Drawing.Point(232, 0);
 			this.btnFriends.Name = "btnFriends";
 			this.btnFriends.Size = new System.Drawing.Size(56, 56);
@@ -779,8 +779,8 @@ namespace eLePhant.Client
 			// btnServers
 			// 
 			this.btnServers.Appearance = System.Windows.Forms.Appearance.Button;
-			this.btnServers.BackColor = System.Drawing.Color.Transparent;
-			this.btnServers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnServers.BackColor = Color.Transparent;
+			this.btnServers.FlatStyle = FlatStyle.Popup;
 			this.btnServers.Location = new System.Drawing.Point(176, 0);
 			this.btnServers.Name = "btnServers";
 			this.btnServers.Size = new System.Drawing.Size(56, 56);
@@ -792,8 +792,8 @@ namespace eLePhant.Client
 			// btnSearch
 			// 
 			this.btnSearch.Appearance = System.Windows.Forms.Appearance.Button;
-			this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-			this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnSearch.BackColor = Color.Transparent;
+			this.btnSearch.FlatStyle = FlatStyle.Popup;
 			this.btnSearch.Location = new System.Drawing.Point(120, 0);
 			this.btnSearch.Name = "btnSearch";
 			this.btnSearch.Size = new System.Drawing.Size(56, 56);
@@ -805,8 +805,8 @@ namespace eLePhant.Client
 			// btnUploads
 			// 
 			this.btnUploads.Appearance = System.Windows.Forms.Appearance.Button;
-			this.btnUploads.BackColor = System.Drawing.Color.Transparent;
-			this.btnUploads.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnUploads.BackColor = Color.Transparent;
+			this.btnUploads.FlatStyle = FlatStyle.Popup;
 			this.btnUploads.Location = new System.Drawing.Point(64, 0);
 			this.btnUploads.Name = "btnUploads";
 			this.btnUploads.Size = new System.Drawing.Size(56, 56);
@@ -818,9 +818,9 @@ namespace eLePhant.Client
 			// btnDownloads
 			// 
 			this.btnDownloads.Appearance = System.Windows.Forms.Appearance.Button;
-			this.btnDownloads.BackColor = System.Drawing.Color.White;
+			this.btnDownloads.BackColor = Color.White;
 			this.btnDownloads.Checked = true;
-			this.btnDownloads.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnDownloads.FlatStyle = FlatStyle.Popup;
 			this.btnDownloads.Location = new System.Drawing.Point(8, 0);
 			this.btnDownloads.Name = "btnDownloads";
 			this.btnDownloads.Size = new System.Drawing.Size(56, 56);
@@ -834,13 +834,13 @@ namespace eLePhant.Client
 			// 
 			this.imageListServerDiscon.ImageSize = new System.Drawing.Size(19, 19);
 			this.imageListServerDiscon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListServerDiscon.ImageStream")));
-			this.imageListServerDiscon.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageListServerDiscon.TransparentColor = Color.Transparent;
 			// 
 			// imageListHelp
 			// 
 			this.imageListHelp.ImageSize = new System.Drawing.Size(19, 19);
 			this.imageListHelp.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListHelp.ImageStream")));
-			this.imageListHelp.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageListHelp.TransparentColor = Color.Transparent;
 			// 
 			// panelGraphic
 			// 
@@ -860,7 +860,7 @@ namespace eLePhant.Client
 			// 
 			// contextMenuNotifyIcon
 			// 
-			this.contextMenuNotifyIcon.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.contextMenuNotifyIcon.MenuItems.AddRange(new MenuItem[] {
 																								  this.menuItemNotifyIconOpen,
 																								  this.menuItemNotifyIconQuit,
 																								  this.menuItemNotifyIconOptions,
@@ -901,11 +901,11 @@ namespace eLePhant.Client
 			// 
 			this.imageListIcons.ImageSize = new System.Drawing.Size(16, 16);
 			this.imageListIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIcons.ImageStream")));
-			this.imageListIcons.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageListIcons.TransparentColor = Color.Transparent;
 			// 
 			// contextMenuAbout
 			// 
-			this.contextMenuAbout.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.contextMenuAbout.MenuItems.AddRange(new MenuItem[] {
 																							 this.menuItemWeb,
 																							 this.menuItemSupport,
 																							 this.menuItemSkins});
@@ -932,7 +932,7 @@ namespace eLePhant.Client
 			// 
 			this.AllowDrop = true;
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(222)), ((System.Byte)(231)), ((System.Byte)(247)));
+			this.BackColor = Color.FromArgb(((System.Byte)(222)), ((System.Byte)(231)), ((System.Byte)(247)));
 			this.ClientSize = new System.Drawing.Size(880, 466);
 			this.Controls.Add(this.panelGraphic);
 			this.Controls.Add(this.panelStatusBar);
